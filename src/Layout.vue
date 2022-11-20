@@ -1,21 +1,17 @@
 <template>
-    <div class="app-layout">
         <div class="main">
-          <navbar-component>
-            <NavBar/>
-          </navbar-component>
-          <main>
+            <NavbarHeader />
+          <main class="md:container md:mx-auto my-4">
             <slot name="main-content"></slot>
           </main>
         </div>
-      </div>
     </template>
     
     <script>
-      import NavBar from './components/NavBar.vue';
+      import NavbarHeader from './components/NavBar.vue';
       export default {
         name: 'BaseLayout',
-        components: { NavBar
+        components: { NavbarHeader
         }
       };
     </script>
